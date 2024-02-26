@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Task 4</title>
+
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo-details">
+            <a href="#" class="logo">
+                <img src="assets/images/Dabbang_Logo.svg" alt="" style="margin-left: 5px;">
+                <span class="logo_name" style="margin-left: 15px;">Dabang</span>
+            </a>
+        </div>
+        <ul class="nav-links p-0">
+            <li>
+                <a href="#" class="active">
+                    <i class="fa-solid fa-chart-pie "></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-chart-line "></i>
+                    <span class="links_name">Leaderboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-cart-shopping "></i>
+                    <span class="links_name">Order </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-bag-shopping "></i>
+                    <span class="links_name">Products</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-chart-line "></i>
+                    <span class="links_name">Sales Report</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-regular fa-comment-dots"></i>
+                    <span class="links_name">Messages</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-gear"></i>
+                    <span class="links_name">Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span class="links_name">Sign Out</span>
+                </a>
+            </li>
+
+        </ul>
+        <div class="proVersion pt-5">
+            <img src="assets/images/sidebarSection.svg" alt="" width="190px" height="220px" style="margin-left: 21px;">
+        </div>
+    </div>
+
+    <section class="home-section">
+        <nav class="navbar navbar-expand-lg">
+            <div class="sidebar-button">
+                <i class="fa-solid fa-bars sidebarBtn"></i>
+            </div>
+            <div class="container-fluid" id="navbarSupportedContent">
+                <div class="form bg-gray">
+                    <form class="d-flex" role="search">
+                        <div class="input-icons search-box">
+                            <i class="fa-solid fa-magnifying-glass icon p-2" style="color: #339bdb;"></i>
+                            <input class="form-control me-2 search input-field " type="search"
+                                placeholder="Search here..." aria-label="Search">
+                        </div>
+                    </form>
+                </div>
+                <ul class="navbar-nav mb-lg-0">
+                    <i class="fa-regular fa-bell h3 m-3 position-relative" style="color: #FFD43B;"></i>
+                    <li class="nav-item"><img src="assets/images/ProfileImage.svg" alt="" width="50px" height="560px"
+                            class="img-fluid "></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle admin_name" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Musfiq <br> <span style="font-size: 14px;">Admin</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">My Account</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="home-content">
+            <div class="row">
+                <div class="col-lg-8 todaySales">
+                    <div class="d-flex p-3">
+                        <div>
+                            <div class="title">Today's Sales</div>
+                            <div style="color: #96A5B8;">Sales Summery</div>
+                        </div>
+                        <div class="ms-auto">
+                            <button type="button" class="btn btn-default btn-sm border border-1 justify-content-end">
+                                <i class="fa-solid fa-file-export"></i>
+                                <span class="glyphicon glyphicon-export"></span> Export
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="px-2 py-3 card-sec">
+                        <div class="row d-flex justify-content-center">
+                            <div class="card mx-4 border-0"
+                                style="width: 200px; min-height: 184px;background-color:  #FFE2E5;border-radius: 15px;">
+                                <div class="card-body">
+                                    <img src="assets/images/Icon_pink.svg" class="img-fluid mb-2" alt="...">
+                                    <h5 class="card-title">$1k</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Total Sales</h6>
+                                    <p class="card-text"></p>
+                                    <a href="#" class="card-link"><small>+8% from yesterday </small></a>
+                                </div>
+                            </div>
+                            <div class="card mx-4 border-0"
+                                style="width: 200px; min-height: 184px ;background-color: #FFF4DE;border-radius: 15px;">
+                                <div class="card-body">
+                                    <img src="assets/images/Icon_orange.svg" class="img-fluid mb-2" alt="...">
+                                    <h5 class="card-title">300</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Total Order</h6>
+                                    <p class="card-text"></p>
+                                    <a href="#" class="card-link"><small>+5% from yesterday </small></a>
+                                </div>
+                            </div>
+
+                            <div class="card mx-4 border-0"
+                                style="width: 200px; min-height: 184px;background-color: #DCFCE7;border-radius: 15px;">
+                                <div class="card-body">
+                                    <img src="assets/images/Icon_green.svg" class="img-fluid mb-2" alt="...">
+                                    <h5 class="card-title">5</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Product Sold</h6>
+                                    <p class="card-text"></p>
+                                    <a href="#" class="card-link"><small>+1.25% from yesterday </small></a>
+                                </div>
+                            </div>
+
+                            <div class="card mx-4 border-0"
+                                style="width: 200px; min-height: 184px;background-color: #F3E8FF;border-radius: 15px;">
+                                <div class="card-body">
+                                    <img src="assets/images/Icon_purple.svg" class="img-fluid mb-2" alt="...">
+                                    <h5 class="card-title">8</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">New Customer </h6>
+                                    <p class="card-text"></p>
+                                    <a href="#" class="card-link"><small>+0.5% from yesterday</small></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 visitorInsights">
+                    <div class="title p-1">Visitor Insights</div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button Lorem fs-17 text-white" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                                    aria-controls="collapseOne">
+                                    Lorem Ipsum
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show "
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body fs-12">
+                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
+                                    a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                                    Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+                                    looked up one of the more obscure Latin words, consectetu
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed Lorem fs-17 text-white" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true"
+                                    aria-controls="collapseTwo">
+                                    Lorem Ipsum
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse "
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body fs-12">
+                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
+                                    a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                                    Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+                                    looked up one of the more obscure Latin words, consectetu
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 visitorList">
+                    <div class="title text-gray">Visitor List</div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <td scope="col" style="color: #96A5B8;">#</td>
+                                    <td scope="col" style="color: #96A5B8;">Name</td>
+                                    <td scope="col" style="color: #96A5B8;">Join Date</td>
+                                    <td scope="col" style="color: #96A5B8;">Actions</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">01</td>
+                                    <td>Stephen P. Osborn</td>
+                                    <td>17 Jan, 2023</td>
+                                    <td><i class="fa-solid fa-pencil" style="color: #74C0FC;"></i> <i
+                                            class="fa-solid fa-trash" style="color: #d71414;"></i></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">02</td>
+                                    <td>Odessa G. Mettler</td>
+                                    <td>13 Feb, 2023</td>
+                                    <td><i class="fa-solid fa-pencil" style="color: #74C0FC;"></i> <i
+                                            class="fa-solid fa-trash" style="color: #d71414;"></i></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">03</td>
+                                    <td>Judith H. Richards</td>
+                                    <td>13 Feb, 2023</td>
+                                    <td><i class="fa-solid fa-pencil" style="color: #74C0FC;"></i> <i
+                                            class="fa-solid fa-trash" style="color: #d71414;"></i></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">04</td>
+                                    <td>Jack B. Perez</td>
+                                    <td>10 Feb, 2023</td>
+                                    <td><i class="fa-solid fa-pencil" style="color: #74C0FC;"></i> <i
+                                            class="fa-solid fa-trash" style="color: #d71414;"></i></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">05</td>
+                                    <td>Chris B. Ryant</td>
+                                    <td>10 Feb, 2023</td>
+                                    <td><i class="fa-solid fa-pencil" style="color: #74C0FC;"></i> <i
+                                            class="fa-solid fa-trash" style="color: #d71414;"></i></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="text-center fs-14" style="color: #5D5FEF;"><a href="#">Read
+                                            More</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-7 topProducts">
+                    <div class="title text-gray">Top Products</div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <td scope="col" style="color: #96A5B8;">#</td>
+                                    <td scope="col" style="color: #96A5B8;">Name</td>
+                                    <td scope="col" style="color: #96A5B8;">Popularity</td>
+                                    <td scope="col" style="color: #96A5B8;">Sales</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class>
+                                    <td scope="row">01</td>
+                                    <td>Home Decor Range</td>
+                                    <td>
+                                        <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                            aria-valuemax="100" style="height: 4px;">
+                                            <div class="progress-bar prog1" style="width: 75%"></div>
+                                        </div>
+                                    </td>
+                                    <td><button type="button" class="btn btn1">45%</button></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">02</td>
+                                    <td>Disney Princess Pink Bag 18'</td>
+                                    <td>
+                                        <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                            aria-valuemax="100" style="height: 4px;">
+                                            <div class="progress-bar prog2" style="width: 60%"></div>
+                                        </div>
+                                    </td>
+                                    <td><button type="button" class="btn btn2">29%</button></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">03</td>
+                                    <td>Bathroom Essentials</td>
+                                    <td>
+                                        <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                            aria-valuemax="100" style="height: 4px;">
+                                            <div class="progress-bar prog3" style="width: 50%"></div>
+                                        </div>
+                                    </td>
+                                    <td><button type="button" class="btn btn3">18%</button></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">04</td>
+                                    <td>Apple Smartwatches</td>
+                                    <td>
+                                        <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                            aria-valuemax="100" style="height: 4px;">
+                                            <div class="progress-bar prog4" style="width: 25%"></div>
+                                        </div>
+                                    </td>
+                                    <td><button type="button" class="btn btn4">25%</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 mainProducts">
+                    <div class="title p-2 ">Main Products</div>
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item ">
+                            <a class="nav-link mainProductBtn text-white" aria-current="page" href="#">Product - 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#" tabindex="-1">Product - 2</a>
+                        </li>
+                    </ul>
+                    <div class="product-1 d-flex">
+                        <div class="image m-3"> <img src="assets/images/BlankImage.svg" alt="" width="62px"
+                                height="62px">
+                        </div>
+                        <div class="content">
+                            <p style="font-weight: 500;" class="m-2">What is this Product??</p>
+                            <p>There are many variations of passages of Lorem Ipsum available,
+                                but the majority have suffered alteration in some form, by injected humour,
+                                or randomised words which don't look even slightly believable. If you are going to
+                                use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing
+                                hidden in the middle of text.</p>
+
+                            <a href="#"><button class="read-more">Read More</button></a>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                <div class="col-lg-4 map">
+                    <div class="title p-3">Sales Mapping by Country</div>
+                    <div class="mapImage mt-3 d-flex justify-content-center"><img class="img-fluid"
+                            src="assets/images/map.svg" alt=""></div>
+                </div>
+
+                <div class="col-lg-3 level">
+                    <div class="title p-2">Volume vs Service Level</div>
+                    <div class="progressbar2 d-flex d-flex justify-content-center p-4" style="rotate: 180deg;">
+                        <div class="progress mx-3" role="progressbar" aria-label="Warning example" aria-valuenow="75"
+                            aria-valuemin="0" aria-valuemax="100" style="background: #0095FF; height: 138px;">
+                            <div class="progress-bar" style="background:#00E096; width:12px; height: 30%;"></div>
+                        </div>
+                        <div class="progress mx-3" role="progressbar" aria-label="Warning example" aria-valuenow="75"
+                            aria-valuemin="0" aria-valuemax="100" style="background: #0095FF; height: 138px;">
+                            <div class="progress-bar" style="background:#00E096; width:12px; height: 60%;"></div>
+                        </div>
+                        <div class="progress mx-3" role="progressbar" aria-label="Warning example" aria-valuenow="75"
+                            aria-valuemin="0" aria-valuemax="100" style="background: #0095FF; height: 138px;">
+                            <div class="progress-bar" style="background:#00E096; width:12px; height: 90%;"></div>
+                        </div>
+                        <div class="progress mx-3" role="progressbar" aria-label="Warning example" aria-valuenow="75"
+                            aria-valuemin="0" aria-valuemax="100" style="background: #0095FF; height: 138px;">
+                            <div class="progress-bar" style="background:#00E096; width:12px; height: 50%;"></div>
+                        </div>
+                        <div class="progress mx-3" role="progressbar" aria-label="Warning example" aria-valuenow="75"
+                            aria-valuemin="0" aria-valuemax="100" style="background: #0095FF; height: 138px;">
+                            <div class="progress-bar" style="background:#00E096; width:12px; height: 60%;"></div>
+                        </div>
+                        <div class="progress mx-3" role="progressbar" aria-label="Warning example" aria-valuenow="75"
+                            aria-valuemin="0" aria-valuemax="100" style="background: #0095FF; height: 138px;">
+                            <div class="progress-bar" style="background:#00E096; width:12px; height: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="bottom d-flex justify-content-center">
+                        <div class="volume me-2 d-flex">
+                            <div class="box1 m-2"></div>
+                            Volume <br>
+                            1,135
+                        </div>
+                        <div class="services d-flex " style=" border-left: 1px solid green; height: 20px;">
+                            <div class="box2 m-2"></div>
+                            Services<br>
+                            635
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/fe0ab5bb70.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".sidebarBtn");
+        sidebarBtn.onclick = function () {
+            sidebar.classList.toggle("active");
+            if (sidebar.classList.contains("active")) {
+                sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+            } else
+                sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+        }
+
+    </script>
+</body>
+
+</html>
