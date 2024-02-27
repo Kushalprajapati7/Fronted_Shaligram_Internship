@@ -331,7 +331,7 @@ $(document).ready(function () {
                 var newRow = '<tr><td>' + firstName + '</td><td>' + lastName + '</td><td>' + dobOfBirth + '</td><td>' + emailId + '</td><td>' + address + '</td><td>' + gradYear + '</td><td><i class="fa fa-pen-to-square h4 pe-2 text-success edit-btn"></i> <i class="fa fa-trash h4 delete-btn text-danger"></i></td></tr>';
                 $('#tbody').append(newRow);
             }
-            $('#myModal').modal('hide');
+            // $('#myModal').modal('hide');
         }
 
     }
@@ -489,6 +489,10 @@ $(document).ready(function () {
             $("#gradyear-err").hide();
         }
     }
-
+    let table = new DataTable('#userDetails',{ });
+    table.on('click', 'tbody tr', function () {
+        let data = table.row(this).data();
+     
+        alert('You clicked on ' + data[0] + "'s row");
+    });
 });
-
