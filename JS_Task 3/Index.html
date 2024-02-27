@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Task 02</title>
+    <title>JavaScript Task 03</title>
     <link rel="stylesheet" href="//cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css">
     <link href="//cdn.datatables.net/responsive/2.1.1/css/dataTables.responsive.css" />
     <link data-require="datatables@*" data-semver="1.10.12" rel="stylesheet"
@@ -14,6 +14,12 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
 </head>
 
 <body>
@@ -27,8 +33,7 @@
                 <div class="modal-body">
                     <div class="container-fluid">
 
-                        <form class=" d-flex justify-content-around row px-5" action="#" name="form"
-                            onsubmit="return validateForm()">
+                        <form class="d-flex justify-content-around row px-5" action="#" name="form" >
                             <div class="container-fluid d-flex  justify-content-center align-items-center vw-100">
                                 <h1>Student Form</h1>
                             </div>
@@ -36,7 +41,7 @@
                                 <label for="fname" class="form-label">First Name</label>
                                 <input type="text" name="fName" class="form-control" id="fname"
                                     aria-describedby="emailHelp" placeholder="Kushal">
-                                <p id="first-name-err" style="color: red;"></p>
+                                    <p id="first-name-err" style="color: red;"></p>
                             </div>
                             <div class="mb-3 col col-xl-4 col-12  px-lg-5 p-0">
                                 <label for="lname" class="form-label">Last Name</label>
@@ -70,16 +75,16 @@
                             </div>
                             <div class="container-fluid d-flex justify-content-center pt-3 ps-5">
                                 <button id="submitBtn" class="btn btn-lg bg-primary text-white p-2" type="submit"
-                                    onclick="return validateForm();">Submit</button>
+                                    >Submit</button>
                             </div>
                         </form>
 
-                        <div class="container-fluid d-flex justify-content-between px-5">
+                        <!-- <div class="container-fluid d-flex justify-content-between px-5">
                             <h2 class="">Education</h2>
                             <i class="fa fa-plus-circle h4" onclick="insertRow()"></i>
-                          </div>
+                          </div> -->
                         
-                          <div class="container-fluid px-5 table-responsive">
+                          <!-- <div class="container-fluid px-5 table-responsive">
                             <table class="table" id="myTable">
                               <thead>
                                 <tr>
@@ -114,7 +119,7 @@
                               </tbody>
                             </table>
                         
-                          </div>
+                          </div> -->
 
                     </div>
                 </div>
@@ -128,11 +133,11 @@
     <div class="container-fluid px-5 table-responsive">
         <div class="d-flex justify-content-between px-5 py-4">
             <h2>User Details</h2>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+            <button type="button" id="add-btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
                 Add Details
             </button>
         </div>
-        <table id="educationDetailsTable" class="table table-hover">
+        <table id="userDetails" class="table table-hover">
             <thead>
                 <tr>
                     <th>First Name</th>
@@ -147,6 +152,8 @@
             <tr>      
             </tr>
                 <tbody id="tbody">
+                    
+
                 </tbody>
         </table>
     </div>
@@ -158,9 +165,6 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/e5dba19445.js" crossorigin="anonymous"></script>
-
-    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
 </body>
 
 </html>
