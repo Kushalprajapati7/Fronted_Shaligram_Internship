@@ -284,17 +284,36 @@
 //     tbody.removeChild(row);
 // }
 
-
-
-
-
 $(document).ready(function () {
     var editedRow = null;
     var isEditing = false;
 
-    $('#add-btn').click(function () {
+    var table = $('#userDetails').DataTable();
+
+    // table.on('click', 'tbody tr', function () {
+    //     let data = table.row(this).data();
+     
+    //     alert('You clicked on ' + data[0] + "'s row");
+    // });
+
+    function addRowDataToTable(firstName, lastName, dob, email, address, graduation) {
+        table.row.add([
+            firstName,
+            lastName,
+            dob,
+            email,
+            address,
+            graduation,
+            '<a href="javascript:void(0)" class="edit-btn" type="button" id="edit-btn"><i class="fa fa-pen-to-square h4 pe-2 text-success"></i></a><a href="javascript:void(0)" class="delete-btn" type="button" id="delete-btn"><i class="fa fa-trash h4 text-danger" ></i></a>'
+        ]).draw().node();
+    }
+
+    $('#add-btn').click(function (e) {
+        e.preventDefault();
         isEditing = false;
+
         $('#myModal').modal('show');
+
         $('#fname').val('');
         $('#lname').val('');
         $('#dob').val('');
@@ -304,8 +323,8 @@ $(document).ready(function () {
     });
 
 
-    $('#submitBtn').click(function (event) {
-        event.preventDefault();
+    $('#submitBtn').click(function (e) {
+        e.preventDefault();
 
         var firstName = $('#fname').val();
         var lastName = $('#lname').val();
@@ -326,20 +345,37 @@ $(document).ready(function () {
                 editedRow.find('td').eq(3).text(emailId);
                 editedRow.find('td').eq(4).text(address);
                 editedRow.find('td').eq(5).text(gradYear);
+
+
+                var rowData = table.row(editedRow).data();
+                rowData[0] = firstName;
+                rowData[1] = lastName;
+                rowData[2] = dobOfBirth;
+                rowData[3] = emailId;
+                rowData[4] = address;
+                rowData[5] = gradYear;
+    
+                table.row(editedRow).data(rowData).draw();
             }
             else {
-                var newRow = '<tr><td>' + firstName + '</td><td>' + lastName + '</td><td>' + dobOfBirth + '</td><td>' + emailId + '</td><td>' + address + '</td><td>' + gradYear + '</td><td><i class="fa fa-pen-to-square h4 pe-2 text-success edit-btn"></i> <i class="fa fa-trash h4 delete-btn text-danger"></i></td></tr>';
-                $('#tbody').append(newRow);
+                // var newRow = '<tr><td>' + firstName + '</td><td>' + lastName + '</td><td>' + dobOfBirth + '</td><td>' + emailId + '</td><td>' + address + '</td><td>' + gradYear + '</td><td><i class="fa fa-pen-to-square h4 pe-2 text-success edit-btn"></i> <i class="fa fa-trash h4 delete-btn text-danger"></i></td></tr>';
+                // $('#tbody').append(newRow);
+                addRowDataToTable(firstName, lastName, dobOfBirth, emailId, address, gradYear);
+                // table.row(newRowNode).invalidate().draw();
             }
-            // $('#myModal').modal('hide');
+            
         }
-
+        
+        // $('#myModal').modal('hide');
     }
     );
 
-
-    $(document).on('click', '.delete-btn', function () {
-        $(this).closest('tr').remove();
+    // $(document).on('click', '.delete-btn', function () {
+    //     $(this).closest('tr').remove();
+    // });
+    $('#userDetails').on('click', '.delete-btn', function () {
+        var table = $('#userDetails').DataTable();
+        table.row($(this).parents('tr')).remove().draw();
     });
 
     $(document).on('click', '.edit-btn', function () {
@@ -363,6 +399,8 @@ $(document).ready(function () {
 
         $('#myModal').modal('show');
     });
+
+
 
     $("#first-name-err").hide();
     let fnameError = true;
@@ -417,7 +455,7 @@ $(document).ready(function () {
     function validateEmail() {
         let emailValue = $("#email").val();
         let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if(emailValue.length == ""){
+        if (emailValue.length == "") {
             $("#email-err").show();
             $("#email-err").html(" * Email is missing");
             emailError = false;
@@ -441,13 +479,13 @@ $(document).ready(function () {
 
     function validateAddress() {
         let addressValue = $("#address").val();
-        if(addressValue.length == ""){
+        if (addressValue.length == "") {
             $("#address-err").show();
             $("#address-err").html(" * Address is missing");
             addressError = false;
             return false;
         }
-         else {
+        else {
             $("#address-err").hide();
         }
     }
@@ -489,10 +527,8 @@ $(document).ready(function () {
             $("#gradyear-err").hide();
         }
     }
-    let table = new DataTable('#userDetails',{ });
-    table.on('click', 'tbody tr', function () {
-        let data = table.row(this).data();
-     
-        alert('You clicked on ' + data[0] + "'s row");
-    });
+
+
+
 });
+
