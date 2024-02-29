@@ -237,7 +237,7 @@
 //     return isValid;
 // }
 
-// let tbody = document.getElementById("myTable").getElementsByTagName("tbody")[0];
+let tbody = document.getElementById("myTable").getElementsByTagName("tbody")[0];
 
 // // function insertRow() {
 // //     tbody.innerHTML = tbody.innerHTML +
@@ -257,32 +257,32 @@
 // //     }
 // // }
 
-// function insertRow() {
+function insertRow() {
 
-//     let newRow = document.createElement('tr');
-//     newRow.classList.add('rowdata');
+    let newRow = document.createElement('tr');
+    newRow.classList.add('rowdata');
 
-//     newRow.innerHTML = `
-//         <td><input type="text" name="degree" id="" required></td>
-//         <td><input type="text" name="school" id="" required></td>
-//         <td><input type="month" name="startDate" id="" required></td>
-//         <td><input type="month" name="passYear" id="" required></td>
-//         <td><input type="number" name="percentage" id="" min="0" max="99.99" required></td>
-//         <td><input type="number" name="backlog" id="" min="0" max="7" required></td>
-//         <td><i class="fa fa-minus-circle h4"></i></td>
-//     `;
+    newRow.innerHTML = `
+        <td><input type="text" name="degree" id="" required></td>
+        <td><input type="text" name="school" id="" required></td>
+        <td><input type="month" name="startDate" id="" required></td>
+        <td><input type="month" name="passYear" id="" required></td>
+        <td><input type="number" name="percentage" id="" min="0" max="99.99" required></td>
+        <td><input type="number" name="backlog" id="" min="0" max="7" required></td>
+        <td><i class="fa fa-minus-circle h4"></i></td>
+    `;
 
-//     tbody.appendChild(newRow);
+    tbody.appendChild(newRow);
 
-//     newRow.querySelector('.fa-minus-circle').addEventListener('click', removeRow.bind(newRow.querySelector('.fa-minus-circle')));
+    newRow.querySelector('.fa-minus-circle').addEventListener('click', removeRow.bind(newRow.querySelector('.fa-minus-circle')));
 
-// }
+}
 
 
-// function removeRow() {
-//     let row = this.parentElement.parentElement;
-//     tbody.removeChild(row);
-// }
+function removeRow() {
+    let row = this.parentElement.parentElement;
+    tbody.removeChild(row);
+}
 
 $(document).ready(function () {
     var editedRow = null;
