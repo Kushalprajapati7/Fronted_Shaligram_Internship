@@ -1,8 +1,8 @@
 let tbody = document.getElementById("myTable").getElementsByTagName("tbody")[0];
-var rowCount = 1; // Counter to keep track of the number of rows
+var rowCount = 1;
 
 function insertRow() {
-    rowCount++; // Increment the counter
+    rowCount++;
 
     let newRow = document.createElement('tr');
     newRow.classList.add('rowdata');
@@ -21,7 +21,6 @@ function insertRow() {
     newRow.querySelector('.fa-minus-circle').addEventListener('click', removeRow.bind(newRow.querySelector('.fa-minus-circle')));
 }
 
-
 function removeRow() {
     let row = this.parentElement.parentElement;
     tbody.removeChild(row);
@@ -31,9 +30,6 @@ $(document).ready(function () {
     var editedRow = null;
     var isEditing = false;
     var table = $('#userDetails').DataTable();
-
-    var counter = 1;
-
 
     // function addRowDataToTable(firstName, lastName, dob, email, address, graduation) {
     //     var uniqueId = 'row_' + counter++; 
@@ -121,9 +117,6 @@ $(document).ready(function () {
         }
     }
 
-
-
-
     function addRowToEduTable(degree, school, passyear, startDate, percentage, backlog) {
         var newEduRow = `<tr>
         <td>${degree}</td>
@@ -153,7 +146,6 @@ $(document).ready(function () {
         clearEducationFields();
 
     });
-
 
     $('#submitBtn').click(function (e) {
         e.preventDefault();
