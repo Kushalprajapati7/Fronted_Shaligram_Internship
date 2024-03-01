@@ -144,7 +144,6 @@ $(document).ready(function () {
         $('#gradyear').val('');
 
         clearEducationFields();
-
     });
 
     $('#submitBtn').click(function (e) {
@@ -335,7 +334,6 @@ $(document).ready(function () {
             </tr>`;
 
         $row.after(nestedTable);
-
     });
 
 
